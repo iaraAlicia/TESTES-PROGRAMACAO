@@ -4,60 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .enlace-tabela, .exemplo1{
+            display: flex;
+        }
+        
+        @media screen and (max-width: 950px) {
+            .enlace-tabela{
+                display: inline-block;
+            }
+            .exemplo1{
+                display: none;
+            }
+            .Num1,.Num2,.Num3,.Num4,.CCE{
+                background-color: blue;
+            }
+            .calc{
+                background-color: darkgray;
+            }
+            .visor{
+                background: #80c3ef;
+            }
+            .MAIS{
+                background-color: yellow;
+            }
+            .OFF{
+                background-color: red;
+            }
+            .ligar-desligar, .mumrc{
+                background-color: rgb(68, 129, 6);
+            }
+            
+        }
+    </style>
 </head>
 <body>
     <div style="display: flex; flex-direction:row; width:100%; height:100vh;">
     <div style="display: flex; width: 50%; margin:auto; justify-content: center;">
 
-        <table bgcolor="#d3d3d3" border="2" cellpadding="20" cellspacing="10" >
-            <th bgcolor="" colspan="5"></th>
-            <tr>
-                <th>OFF</th>
-                <th>GT</th>
-                <th>+/</th>
-                <th>AC</th>
-                <th>C.CE</th>
+        <table class="calc" bgcolor="#d3d3d3" border="2" cellpadding="20" cellspacing="10" >
+            <th class="visor" bgcolor="" colspan="5"> 8812931.012</th>
+            <tr class="ligar-desligar">
+                <th class="OFF">OFF</th>
+                <th class="GT">GT</th>
+                <th class="MAISBARRA">+/</th>
+                <th class="AC">AC</th>
+                <th class="CCE">C.CE</th>
             </tr>
-            <tr>
-                <th>MRC</th>
-                <th>M-</th>
-                <th>M+</th>
-                <th>MU</th>
-                <th>-></th>
+            <tr class="mumrc">
+                <th class="MRC">MRC</th>
+                <th class="MTRACO">M-</th>
+                <th class="MMAIS">M+</th>
+                <th class="MU">MU</th>
+                <th class="OUTROTRACO">-></th>
             </tr>
-            <tr>
-                <th>7</th>
-                <th>8</th>
-                <th>9</th>
-                <th>%</th>
-                <th>/-</th>
+            <tr class="Num1">
+                <th class="SETE">7</th>
+                <th class="OITO"> 8</th>
+                <th class="NOVE">9</th>
+                <th class="PROCENTE">%</th>
+                <th class="BARRA">/-</th>
             </tr>
-            <tr>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>X</th>
-                <th>&</th>
+            <tr class="Num2">
+                <th class="QUATRO"> 4</th>
+                <th class="CINCO">5</th>
+                <th class="SEIS">6</th>
+                <th class="NBINARIO">X</th>
+                <th class="SEILA">&</th>
             </tr>
-            <tr>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th rowspan="2">+</th>
-                <th>-</th>
+            <tr class="Num3">
+                <th class="UM">1</th>
+                <th class="DOIS">2</th>
+                <th class="TRES">3</th>
+                <th class="MAIS" rowspan="2">+</th>
+                <th class="TRACO">-</th>
             </tr>
-            <tr>
-                <th>0</th>
-                <th>00</th>
-                <th>.</th>
-                <th>=</th>
+            <tr class="Num4">
+                <th class="ZERO">0</th>
+                <th class="ZEROZERO">00</th>
+                <th class="PONTO">.</th>
+                <th class="IGUAL">=</th>
             </tr>
         </table>
             
     </div>
 
 
-        <div  style="display: flex; width: 50%; margin:auto;justify-content: center;">
+        <div class="exemplo1" style="width: 50%; margin:auto;justify-content: flex-start;">
             <table border="1" cellpadding="20">
                 <tr>
                     <th bgcolor="yellow">A</th>
@@ -88,85 +121,137 @@
     </div>
 
 
-    <div style="display: flex; flex-direction:row; width:100%; height:100vh; background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);">
-        <div style="display: flex; width: 50%; margin:auto; justify-content: center;">
     
-            <table bgcolor="#d3d3d3" border="2" cellpadding="20" cellspacing="10" >
-                <th bgcolor="" colspan="5"></th>
+    
+            <div class="enlace-tabela" style="flex-direction:row; align-content: space-between; flex-wrap: wrap; width:100%; height:100vh;  background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);">
+                <div style="display: flex;  align-items: center; justify-content:center; width: 50%; height:50%; margin:auto;">
+                   
+                    <table bgcolor="#FFFAFA" border="1" cellpadding="5" width="500">
+                        <tr>
+                            <th colspan="2">Alunos</th>
+                            <th>Notas</th>
+                        </tr>
+        
+                        <tr>
+                            <td>-</td>
+                            <td><center><b><i>Prova</i></b></center></td>
+                            <td><center><b><i>Trabalho</i></b></center></td>
+                        </tr>
+                        <tr bgcolor="darkgray">
+                            <td>Ana Paula</td>
+                            <td><font color="green">10</font> </td>
+                            <td><font color="green">8</font></td>
+                        </tr>
+                        <tr>
+                            <td>Beatriz</td>
+                            <td><font color="green">7</font></td>
+                            <td><font color="red">5</font></td>
+                        </tr>
+                        <tr bgcolor="darkgray">
+                            <td>Joaquim</td>
+                            <td><font color="green">9</font></td>
+                            <td><font color="green">10</font></td>
+                        </tr>
+                        <tr>
+                            <td>Paulo</td>
+                            <td><font color="red">4.5</font></td>
+                            <td><font color="green">6</font></td>
+                        </tr>
+                        <tr bgcolor="darkgray">
+                            <td>Tadeu</td>
+                            <td><font color="red">3</font></td>
+                            <td><font color="red">2</font></td>
+                        </tr>
+                    </table>
+        
+                </div>
+        
+                <div style="display: flex;  align-items: center; justify-content:center; width: 50%; height:50%; margin:auto;">
+        
+                    <table bgcolor="#FFFAFA" border="1" cellpadding="5">
+                        <tr>
+                            <th colspan="5" bgcolor="#00FF7F"><font size="5">Tabela Serviços Mecânicos</font></th>
+                        </tr>
+                        <tr bgcolor="darkgray">
+                            <td rowspan="5"  bgcolor="#008B8B" > <font>Nacionais</font> </td>
+                            <td>Veiculos</td>
+                            <td>Serviços</td>
+                            <td>Tempo Previsto</td>
+                            <td>Valor</td>
+                        </tr>
+                        <tr>
+                            <td>Caminhonete S10</td>
+                            <td>Suspensão</td>
+                            <td>3 horas e 25 minutos</td>
+                            <td>350,00</td>
+                        </tr>
+                        <tr>
+                            <td>Caminhonete Ranger</td>
+                            <td>Freio</td>
+                            <td>3 hora e 45 minutos</td>
+                            <td>200,00</td>
+                        </tr>
+                        <tr>
+                            <td>Caminhonete Hilux</td>
+                            <td>Troca de bateria</td>
+                            <td>30 minutos</td>
+                            <td>25,00</td>
+                        </tr>
+                        <tr>
+                            <td>Caminhonete D10</td>
+                            <td>Alinhamento</td>
+                            <td>1 hora e 40 minutos</td>
+                            <td>220,00</td>
+                        </tr>
+        
+                    </table>
+        
+                </div>
+
+                
+        <div style="display: flex;  align-items: center; justify-content:center; width: 100%; height:50%; margin:auto; background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);">
+
+
+            
+            <table bgcolor="#FFFAFA" border="1" cellpadding="5">
                 <tr>
-                    <th>OFF</th>
-                    <th>GT</th>
-                    <th>+/</th>
-                    <th>AC</th>
-                    <th>C.CE</th>
+                    <th colspan="7" bgcolor="red"><font>Venha Morar em Nossos Belos Resisdenciais - Viver Serra</font></th>
                 </tr>
                 <tr>
-                    <th>MRC</th>
-                    <th>M-</th>
-                    <th>M+</th>
-                    <th>MU</th>
-                    <th>-></th>
+                    <td bgcolor="yellow" colspan="3"><b>Apartamentos</b></td>
+                    <td bgcolor="orange"><b>Localização</b></td>
+                    <td bgcolor="orange" >Laranjeiras -<br> 4 min.</td>
+                    <td bgcolor="orange">Manguinhos - <br>2 min.</td>
+                    <td bgcolor="orange">Vitoria - 8 min</td>
                 </tr>
                 <tr>
-                    <th>7</th>
-                    <th>8</th>
-                    <th>9</th>
-                    <th>%</th>
-                    <th>/-</th>
+                    <td bgcolor="yellow"><center>2 Quartos</center></td>
+                    <td bgcolor="yellow"><center>3 Quartos</center></td>
+                    <td bgcolor="yellow"><center>4 Quartos</center></td>
+                    <td bgcolor="orange" colspan="4"><center><b>Corretor On-Line</b></center></td>
                 </tr>
                 <tr>
-                    <th>4</th>
-                    <th>5</th>
-                    <th>6</th>
-                    <th>X</th>
-                    <th>&</th>
+                    <td bgcolor="yellow">1 Suíte</td>
+                    <td bgcolor="yellow">2 Suíte</td>
+                    <td bgcolor="yellow"><center>3 <br> Suíte</center></td>
+                    <td bgcolor="orange">3333-2333</td>
+                    <td bgcolor="orange">9999-9969</td>
+                    <td bgcolor="orange">8888-8868</td>
+                    <td bgcolor="orange">8111-1169</td>
                 </tr>
                 <tr>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th rowspan="2">+</th>
-                    <th>-</th>
-                </tr>
-                <tr>
-                    <th>0</th>
-                    <th>00</th>
-                    <th>.</th>
-                    <th>=</th>
+                    <td bgcolor="yellow"><b>Lazer</b></td>
+                    <td bgcolor="yellow" colspan="2">Piscina, Salão <br> de Festa, <br> Quadra Poliesportivas</td>
+                    <td bgcolor="orange" colspan="3"><center>Pronto Para Morar</center></td>
+                    <td bgcolor="orange"><b>LANÇAMENTO</b></td>
                 </tr>
             </table>
-                
+
+
         </div>
-    
-    
-            <div  style="display: flex; width: 50%; margin:auto;justify-content: center;">
-                <table border="1" cellpadding="20">
-                    <tr>
-                        <th bgcolor="yellow">A</th>
-                        <th bgcolor="yellow">B</th>
-                        <th bgcolor="yellow">C</th>
-                        <th bgcolor="yellow">D</th>
-    
-                    </tr>
-                    <tr>
-                        <th bgcolor="red">L</th>
-                        <th bgcolor="gray" colspan="2" rowspan="2">Z</th>
-                        <th>E</th>
-                    </tr>
-                    <tr>
-                        <th>K</th>
-                        <th bgcolor="red">F</th>
-                    </tr>
-                    <tr>
-                        <th bgcolor="green">J</th>
-                        <th bgcolor="green">I</th>
-                        <th bgcolor="green">H</th>
-                        <th bgcolor="green">G</th>
-            
-                    </tr>
-                </table>
-            </div>
-        </div>
+
+   
 </body>
 </html>
